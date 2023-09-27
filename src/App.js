@@ -25,7 +25,6 @@ function App() {
     <div className="App">
       <h1>Interactive Wordle</h1>
       <GameBoard targetWord={targetWord} guesses={guesses} />
-      <Keyboard onClick={handleLetterClick} />
     </div>
   );
 }
