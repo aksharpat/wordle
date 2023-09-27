@@ -1,38 +1,119 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Style the Wordle name */
+.wordle-name {
+    font-size: 36px;
+    /* Adjust the font size to make it bigger */
+    margin-bottom: 10px;
+    /* Add some margin to separate it from the guesses */
+    position: relative;
+    /* To allow positioning of the line under it */
+    font-family: Helvetica;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wordle-name::after {
+    content: '';
+    /* Create an empty content */
+    display: block;
+    width: 60px;
+    /* Adjust the line width as needed */
+    height: 3px;
+    /* Adjust the line thickness as needed */
+    background-color: #ccc;
+    /* Faint line color */
+    margin: 0 auto;
+    /* Center the line horizontally */
+    position: absolute;
+    bottom: 0;
+    /* Position the line at the bottom of the Wordle name */
+    left: 0;
+    right: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.game-board {
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.target-word {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.guesses {
+    display: flex;
+    justify-content: center;
+}
+
+.guess {
+    margin: 0 5px;
+    font-size: 20px;
+    border-bottom: 2px solid #333;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 400px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.keyboard-button {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    font-size: 18px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.delete-button {
+    background-color: #ff6347;
+    /* Red color for the delete button */
+    color: white;
+    width: 80px;
+    font-size: 20px;
+}
+
+
+.game-board {
+    text-align: center;
+}
+
+/* Style the target word boxes */
+.target-word {
+    display: flex;
+    justify-content: center;
+}
+
+.letter-box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 60px;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 0 10px;
+    margin-top: 100px;
+    /* Add spacing between the boxes */
+    cursor: pointer;
+    /* Add a pointer cursor to indicate clickability */
+}
+
+/* Style the active box (when clicked) */
+.letter-box.active {
+    background-color: #ccc;
 }
