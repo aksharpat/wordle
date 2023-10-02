@@ -13,13 +13,22 @@ const Keyboard = ({ updateGuess }) => {
             {rows.map((row, rowIndex) => (
                 <div key={rowIndex} className="keyboard-row">
                     {row === 'DELETE' ? (
-                        <button
-                            key={row}
-                            className="keyboard-button delete-button"
-                            onClick={() => updateGuess(0, 'DELETE')}
-                        >
-                            Delete
-                        </button>
+                        <>
+                            <button
+                                key="Enter"
+                                className="keyboard-button enter-button"
+
+                            >
+                                Enter
+                            </button>
+                            <button
+                                key={row}
+                                className="keyboard-button delete-button"
+                                onClick={() => updateGuess(0, 'DELETE')}
+                            >
+                                Delete
+                            </button>
+                        </>
                     ) : (
                         row.split('').map((letter, index) => (
                             <button

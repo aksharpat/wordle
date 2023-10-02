@@ -65,13 +65,14 @@
     display: flex;
     justify-content: center;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .keyboard-button {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     margin: 2px;
-    font-size: 18px;
+    font-size: 20px;
     border: 1px solid #333;
     border-radius: 5px;
     cursor: pointer;
@@ -89,6 +90,14 @@
     text-align: center;
 }
 
+.enter-button {
+    background-color: #0bb605;
+    /* Red color for the delete button */
+    color: white;
+    width: 80px;
+    font-size: 20px;
+    text-align: center;
+}
 
 .game-board {
     text-align: center;
