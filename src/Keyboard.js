@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Amplify, API } from 'aws-amplify';
+//import { Amplify, API } from 'aws-amplify';
 import AWS from 'aws-sdk';
 import GameBoard from './Gameboard';
 
