@@ -1,5 +1,6 @@
 .App {
     text-align: center;
+    font-size: large;
 }
 
 /* Style the Wordle name */
@@ -78,8 +79,28 @@
     cursor: pointer;
     color: #333;
     text-align: center;
+    background-color: rgb(255, 255, 255);
 }
 
+.message {
+    display: inline-block;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: 800;
+}
+
+.message-sent {
+    display: inline-block;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: 800;
+}
 
 .delete-button {
     background-color: #ff6347;
@@ -92,6 +113,15 @@
 
 .enter-button {
     background-color: #0bb605;
+    /* green color for the enter button */
+    color: white;
+    width: 80px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.reset-button {
+    background-color: #2aa5d6;
     /* green color for the enter button */
     color: white;
     width: 80px;

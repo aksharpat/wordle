@@ -5,6 +5,7 @@ const GameBoard = ({ targetWord }) => {
     const [guesses, setGuesses] = useState(['', '', '', '', '']);
     const [lastNonEmptyIndex, setLastNonEmptyIndex] = useState(-1);
 
+    var guess = [...guesses];
     const updateGuess = (index, letter) => {
         if (index >= 0) {
             const updatedGuesses = [...guesses];
@@ -20,8 +21,13 @@ const GameBoard = ({ targetWord }) => {
                 }
             }
             setGuesses(updatedGuesses);
+            guess = updatedGuesses;
         }
     };
+
+    const getGuess = async () => {
+        return guess.join("");
+    }
 
     const findLastNonEmptyIndex = (guessArray) => {
         for (let i = guessArray.length - 1; i >= 0; i--) {
@@ -41,7 +47,7 @@ const GameBoard = ({ targetWord }) => {
                     </div>
                 ))}
             </div>
-            <Keyboard updateGuess={updateGuess} />
+            <Keyboard updateGuess={updateGuess} getGuess={getGuess} />
         </div>
     );
 };
