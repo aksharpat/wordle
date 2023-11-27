@@ -85,7 +85,7 @@
 .message {
     display: inline-block;
     padding: 10px;
-    background-color: red;
+    background-color: #ff6347;
     color: white;
     border-radius: 5px;
     margin: 10px;
@@ -95,7 +95,7 @@
 .message-sent {
     display: inline-block;
     padding: 10px;
-    background-color: green;
+    background-color: #0bb605;
     color: white;
     border-radius: 5px;
     margin: 10px;
