@@ -93,7 +93,7 @@ const getWord = async () => {
 }
 
 
-const Keyboard = ({ updateGuess, getGuess }) => {
+const Keyboard = ({ updateGuess, getGuess, clearGuess }) => {
     const rows = [
         'QWERTYUIOP',
         'ASDFGHJKL',
@@ -120,7 +120,7 @@ const Keyboard = ({ updateGuess, getGuess }) => {
         }, 3000);
     };
 
-    const Send = async (getGuess) => {
+    const Send = async (getGuess, clearGuess) => {
         try {
             const result = await getGuess();
             console.log(result);
@@ -159,6 +159,9 @@ const Keyboard = ({ updateGuess, getGuess }) => {
                             setMessage_2(null);
                         }, 3000);
                         invokeLambda();
+                        await clearGuess();
+                        await updateGuess(-1, 'DELETE')
+                        //await updateGuess(0, 'DELETE')
                     }
                 }
                 console.log('The guess number is:', guessNumber);
@@ -188,7 +191,7 @@ const Keyboard = ({ updateGuess, getGuess }) => {
                                 key="Enter"
                                 className="keyboard-button enter-button"
                                 //onClick={() => invokeLambda()}
-                                onClick={() => Send(getGuess)}
+                                onClick={() => Send(getGuess, clearGuess)}
                             >
                                 Enter
                             </button>

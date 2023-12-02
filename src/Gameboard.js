@@ -14,7 +14,8 @@ const GameBoard = ({ targetWord }) => {
                     updatedGuesses[lastNonEmptyIndex] = '';
                     setLastNonEmptyIndex(findLastNonEmptyIndex(updatedGuesses));
                 }
-            } else {
+            }
+            else {
                 if (lastNonEmptyIndex < guesses.length - 1) {
                     updatedGuesses[lastNonEmptyIndex + 1] = letter;
                     setLastNonEmptyIndex(findLastNonEmptyIndex(updatedGuesses));
@@ -22,11 +23,18 @@ const GameBoard = ({ targetWord }) => {
             }
             setGuesses(updatedGuesses);
             guess = updatedGuesses;
+        } else {
+            setLastNonEmptyIndex(-1);
+            setGuesses(['', '', '', '', ''])
         }
     };
 
     const getGuess = async () => {
         return guess.join("");
+    }
+    const clearGuess = async () => {
+        setGuesses(['', '', '', '', '']);
+        return 0;
     }
 
     const findLastNonEmptyIndex = (guessArray) => {
@@ -47,7 +55,7 @@ const GameBoard = ({ targetWord }) => {
                     </div>
                 ))}
             </div>
-            <Keyboard updateGuess={updateGuess} getGuess={getGuess} />
+            <Keyboard updateGuess={updateGuess} getGuess={getGuess} clearGuess={clearGuess} />
         </div>
     );
 };
