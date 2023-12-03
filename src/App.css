@@ -170,9 +170,28 @@
     }
 
     .keyboard-button {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
         margin: 1px;
-        font-size: 10px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .delete-button {
+        width: 40px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .enter-button {
+        width: 40px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .reset-button {
+        width: 40px;
+        font-size: 20px;
+        text-align: center;
     }
 }
