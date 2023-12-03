@@ -159,3 +159,13 @@
 .letter-box.active {
     background-color: #ccc;
 }
+
+@media screen and (max-width: 600px) {
+    .wordle-name {
+        font-size: 24px;
+    }
+
+    .target-word {
+        font-size: 18px;
+    }
+}
