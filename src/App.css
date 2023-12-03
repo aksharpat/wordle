@@ -178,19 +178,19 @@
     }
 
     .delete-button {
-        width: 40px;
+        width: 80px;
         font-size: 20px;
         text-align: center;
     }
 
     .enter-button {
-        width: 40px;
+        width: 80px;
         font-size: 20px;
         text-align: center;
     }
 
     .reset-button {
-        width: 40px;
+        width: 80px;
         font-size: 20px;
         text-align: center;
     }
